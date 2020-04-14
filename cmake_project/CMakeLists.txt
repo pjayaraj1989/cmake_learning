@@ -9,13 +9,15 @@ include_directories (src)
 include_directories (lib)
 
 #search for lib in this dir
-link_directories(${CMAKE_BINARY_DIR}/lib)
+link_directories(lib)
 
 #set sources
 set(SOURCES "src/main.c")
 
+#add exec
 add_executable(run ${SOURCES})
 
+#link to lib
 target_link_libraries (run functions)
 
 
